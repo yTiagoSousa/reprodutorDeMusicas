@@ -3,6 +3,7 @@ let slider = document.querySelector('#progress');
 let state = 0;
 let track = document.createElement('audio');
 track.ontimeupdate = () => this.audio_currentTime();
+track.ondurationchange = () => this.setTrackDuration();
 let index_n = 0;
 let old_index = undefined;
 let musicName;
@@ -51,8 +52,7 @@ function loadTrack(index_n){
 
     selectTrack(old_index, index_n);
         old_index = index_n;
-    
-    setTrackDuration();
+ 
 
 }
 

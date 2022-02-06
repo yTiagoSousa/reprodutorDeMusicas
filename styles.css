@@ -8,9 +8,13 @@
 
 	/* font-family: Arial, Helvetica, sans-serif; */
 }
-body{
+  body {
     color: white;
-}
+    background-color: black;
+  }
+
+
+
 button{
     cursor: pointer;
     background: none;
@@ -56,13 +60,12 @@ button{
 .container_music{
 
 	width: 100%;
-    height: 90%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 #playlistTitle{
-    padding-right: 50px;
+    padding-right: 50px; to
     padding-top: 15px;
     padding-bottom: 25px;
     width: 100%;
@@ -182,3 +185,38 @@ input[type="range"]::-webkit-slider-thumb{
 
 /* @media screen and (max-width: 800px) {
 */
+  @media only screen and (max-width: 600px) {
+
+  #musicPhoto{
+    display: none;
+  }
+    
+.container_music{
+  	width: 100%;
+  	
+    display: flex;
+   
+    flex-direction: column-reverse;
+}
+#playlistContainer{
+  position: sticky;
+height: 100vh;
+  top: 0;
+  display: block;
+  border-radius: 0;
+}
+#playlistTitle{
+ padding: 6%;
+}
+
+#topo{
+  height: 10vh;
+}
+#containerPlayer{
+ position: relative;
+  
+  top: 0;
+  height: 90vh;
+  
+}
+}
