@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- <script src="beyourself.js"></script> -->
+    
+    <title>Repordutor de Musicas</title>
+
+    
+</head>
+<body> 
+    <div class="container">
+        <div id="appArea">
+
+            <div id="topo">
+                <i class="fas fa-music"></i>
+                <p id="appName"> Music </p>
+            </div>
+
+            <div class="container_music">
+                <div onload="loadPlayList()" id="playlistContainer">
+                    <h1 id="playlistTitle">Worship</h1>
+                    <ul id="playlist">
+                        <li id="music0" onclick="loadTrack(0)">
+                            <p id="musicName0" class="musicName"></p>
+                            <p id="musicAuthor0" class="musicAuthor"></p>
+                        </li>
+                        <li id="music1" onclick="loadTrack(1)">
+                            <p id="musicName1" class="musicName"></p>
+                            <p id="musicAuthor1" class="musicAuthor"></p>
+                        </li>
+                        <li id="music2" onclick="loadTrack(2)">
+                            <p id="musicName2" class="musicName"></p>
+                            <p id="musicAuthor2" class="musicAuthor"></p>
+                        </li>
+                        <li id="music3" onclick="loadTrack(3)">
+                            <p id="musicName3" class="musicName"></p>
+                            <p id="musicAuthor3" class="musicAuthor"></p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="musicPhoto"></div>
+                <div id="containerPlayer">
+                   
+                    <div id="musicName"></div>
+                    <div id="authorName"></div>
+
+                    <div id="player">
+                        <button onclick="changeState()" id="musicState"><i class="far fa-play-circle fa-3x iconColor" aria-hidden="true"></i></button>
+                        <button onclick="previous()" id="previous"><i class="fas fa-arrow-alt-circle-left fa-3x iconColor"></i></button>
+                        <button onclick="next()" id="next"><i class="fas fa-arrow-alt-circle-right fa-3x iconColor"></i></button>  
+                    </div>
+
+                    <div id="containerProgressBar">
+                            
+                        <div class="progressBar">
+                            <input type="range" min="0" max="100" value="0" id="progress" onclick="Sliderposition()">
+                        </div>
+                        <div ontimeupdate="audio_currentTime()" id="timingMusic"></div>
+                        <div id="musicDuration"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="beyourself.js"></script>
+</body>
+</html>
