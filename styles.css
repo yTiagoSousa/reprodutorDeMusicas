@@ -65,7 +65,7 @@ button{
     flex-direction: row;
 }
 #playlistTitle{
-    padding-right: 50px; to
+    padding-right: 50px;
     padding-top: 15px;
     padding-bottom: 25px;
     width: 100%;
@@ -97,12 +97,16 @@ button{
 }
 
 #musicPhoto{
-    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    width: 80%;
     margin: 5%;
-    background: url('imagem.png');
-    background-repeat: no-repeat,no-repeat;
-    background-position: center;
-    background-size: 100%;
+}
+#logo-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #containerPlayer{
